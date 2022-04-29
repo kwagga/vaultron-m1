@@ -75,6 +75,7 @@ _Diagram of a Vaultron cluster with Consul storage flavor_
     - [server gave HTTP response to HTTPS client](#server-gave-http-response-to-https-client)
     - [Error: Unable to read Docker image into resource: Unable to pull image](#error-unable-to-read-docker-image-into-resource-unable-to-pull-image)
     - [Some Other Undefined Problem!](#some-other-undefined-problem)
+    - [Using an M1 processor](#using-an-M1-processor)
   - [Resources](#resources)
   - [Who?](#who)
   - [Special Thanks](#special-thanks)
@@ -1272,6 +1273,19 @@ Other things that can help include:
 - Use the latest release version from GitHub
 
 Note that the GitHub Master branch strives to remain relatively stable, but a release is usually preferred.
+
+### Using an M1 processor
+
+Vaultron can run on a MBP with an M1 processor using a few workarounds.
+
+- Make sure you're on Terraform v1.1.9 or later.
+- Install and activate the `m1-terraform-provider-helper`:
+
+```
+$ brew install kreuzwerker/taps/m1-terraform-provider-helper
+$ m1-terraform-provider-helper activate
+$ m1-terraform-provider-helper install hashicorp/template -v v2.2.0
+```
 
 ## Resources
 
